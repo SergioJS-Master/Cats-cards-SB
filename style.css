@@ -1,0 +1,428 @@
+body {
+    margin: 0;
+    background-color: #00215e;
+    /* background-image: url(./img/ctPNJ.png); */
+    background-position: center;
+    background-size: cover;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.header__style {
+    width: auto;
+    height: auto;
+    display: flex;
+    background-color: #e47a00;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;  
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.header__logo {
+    height: 65px;
+    width: 65px;
+    margin: 10px;
+}
+.header__button {
+    justify-content: flex-end;
+}
+/* .btn a {
+    text-decoration: none;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+} */
+
+.container__cats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.card__cats {
+    width: 300px;
+    height: auto;
+    background-color: #e47a00;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    padding: 20px;   
+    transition: ease-in 0.3s;
+    box-shadow: 0px 0px 10px rgb(255, 132, 0);
+} 
+.card__content {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 15px;
+    color: white;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.btn {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(220, 81, 0);
+    box-shadow: 0px 0px 12px #ffcc00;
+    border-radius: 20px; 
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-top: auto;
+    transition: ease-in 0.2s; 
+}
+.btn_add_cat {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(59, 137, 0) ;
+    box-shadow: 0px 0px 12px rgb(33, 75, 0);
+    border-radius: 20px; 
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 15px;
+    margin: 15px;
+    margin-top: auto;
+    transition: ease-in 0.2s;
+}
+.btn__delete {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(173, 0, 0) ;
+    box-shadow: 0px 0px 12px rgb(62, 0, 0);
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 15px;
+    margin-top: 2px;
+    transition: ease-in 0.2s;
+}
+.btn_add_form {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(59, 137, 0) ;
+    box-shadow: 0px 0px 12px rgb(33, 75, 0);
+    border-radius: 20px; 
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 15px;
+    margin: 35px;
+    margin-top: auto;
+    transition: ease-in 0.2s;
+}
+.btn_delete_form {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(173, 0, 0) ;
+    box-shadow: 0px 0px 12px rgb(62, 0, 0);
+    border-radius: 20px; 
+    width: auto;
+    height: auto;
+    border: none;
+    padding: 15px;
+    margin: 35px;
+    margin-top: auto;
+    transition: ease-in 0.2s;
+}
+.btn_add_form:hover {
+    background-color: rgb(75, 173, 0);
+    box-shadow: 0px 0px 20px rgb(16, 37, 0);
+}
+.btn_delete_form:hover {
+    background-color: rgb(239, 0, 0);
+    box-shadow: 0px 0px 20px rgb(29, 0, 0);
+}
+.card__cats:hover { 
+    background-color: #e4a300;
+    box-shadow: 0px 0px 30px rgb(255, 132, 0);
+}
+.btn:hover {
+    background-color: rgb(252, 139, 0);
+    box-shadow: 0px 0px 20px rgb(102, 53, 0);
+}
+.btn_add_cat:hover {
+    background-color: rgb(75, 173, 0);
+    box-shadow: 0px 0px 20px rgb(16, 37, 0);
+}
+.btn__delete:hover {
+    background-color: rgb(239, 0, 0);
+    box-shadow: 0px 0px 20px rgb(29, 0, 0);
+}
+
+.form {
+    background-color: #00215e;
+    background-image: url(./img/ctPNJ.png);
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: 1000px; 
+    margin-top: 0px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 20px;
+    color: white;
+}
+.container__form {
+    display: flex;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+form {
+    background-color: #cc6d00;
+    width: auto;
+    height: auto;
+    margin: 50px;
+    display: grid;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 12px #ffc37f;
+}
+form h1 {
+    display: flex;
+    justify-content: center;
+}
+.form__group {
+    padding: 10px;
+    background-color: #ff8800;
+    box-shadow: 0px 0px 8px #ffc37f;
+    border-radius: 25px;
+    margin: 10px;   
+}
+.form__group label {
+    padding-right: 10px;
+}
+form input {
+    border-radius: 25px;
+    padding: 10px;
+    outline: none;
+}
+form select {
+    border-radius: 25px;
+    padding: 10px;
+    outline: none;
+}
+.border__one{
+    margin-top: 50px;
+    border: solid 10px rgb(255, 132, 0); 
+    box-shadow: 0px -10px 35px 2em rgb(255, 132, 0);
+}
+.border__two {
+    margin-bottom: 0px;
+    border: solid 10px rgb(255, 132, 0);
+}
+
+@media (max-width: 720px) {
+    .header__style {
+        width: auto;
+        height: auto;
+        display: flex;
+        background-color: #e47a00;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;  
+        position: sticky;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+    .header__logo {
+        height: 65px;
+        width: 65px;
+        margin: 10px;
+    }
+    .header__button {
+        display: grid;
+        justify-content: flex-end;
+        
+    }
+    .container__cats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 5px;
+    }
+    .card__cats {
+        width: 300px;
+        height: auto;
+        background-color: #e47a00;
+        border-radius: 20px;
+        margin: 20px;
+    
+        padding: 20px;   
+        transition: ease-in 0.3s;
+        box-shadow: 0px 0px 10px rgb(255, 132, 0);
+    } 
+    .card__content {
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 15px;
+        color: white;
+        width: auto;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .btn {
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 20px;
+        color: white;
+        background-color: rgb(220, 81, 0);
+        box-shadow: 0px 0px 12px #ffcc00;
+        border-radius: 20px; 
+        width: auto;
+        height: auto;
+        border: none;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: auto;
+        transition: ease-in 0.2s; 
+    }
+    .btn_add_cat {
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 20px;
+        color: white;
+        background-color: rgb(59, 137, 0) ;
+        box-shadow: 0px 0px 12px rgb(33, 75, 0);
+        border-radius: 20px; 
+        width: auto;
+        height: auto;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        margin-top: auto;
+        transition: ease-in 0.2s;
+    }
+    .btn__delete {
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 20px;
+        color: white;
+        background-color: rgb(173, 0, 0) ;
+        box-shadow: 0px 0px 12px rgb(62, 0, 0);
+        border-radius: 20px;
+        width: auto;
+        height: auto;
+        border: none;
+        padding: 15px;
+        margin-top: 2px;
+        transition: ease-in 0.2s;
+    }
+    .btn_add_form {
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 20px;
+        color: white;
+        background-color: rgb(59, 137, 0) ;
+        box-shadow: 0px 0px 12px rgb(33, 75, 0);
+        border-radius: 20px; 
+        width: auto;
+        height: auto;
+        border: none;
+        padding: 15px;
+        margin-top: 45px;
+        
+        transition: ease-in 0.2s;
+    }
+    .btn_delete_form {
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 20px;
+        color: white;
+        background-color: rgb(173, 0, 0) ;
+        box-shadow: 0px 0px 12px rgb(62, 0, 0);
+        border-radius: 20px; 
+        width: auto;
+        height: auto;
+        border: none;
+        padding: 15px;
+        margin: 35px;
+        margin-top: auto;
+        transition: ease-in 0.2s;
+    }
+    .form {
+        background-color: #00215e;
+        background-image: url(./img/ctPNJ.png);
+        background-repeat: repeat;
+        width: auto;
+        height: 1000px; 
+        margin-top: 0px;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 20px;
+        color: white;
+    }
+    .container__form {
+        display: flex;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    form {
+        background-color: #cc6d00;
+        width: auto;
+        height: auto;
+        margin: 15px;
+        display: grid;
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 12px #ffc37f;
+    }
+    form h1 {
+        display: flex;
+        justify-content: center;
+    }
+    .form__group {
+        padding: 30px;
+        background-color: #ff8800;
+        box-shadow: 0px 0px 8px #ffc37f;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: 1px;
+        margin-right: 1px;  
+    }
+    .form__group label {
+        padding-right: 10px;
+    }
+    form input {
+        border-radius: 25px;
+        padding: 10px;
+        outline: none;
+    }
+    form select {
+        border-radius: 25px;
+        padding: 10px;
+        outline: none;
+    }
+    .border__one{
+        margin-top: 50px;
+        border: solid 10px rgb(255, 132, 0); 
+        box-shadow: 0px -10px 35px 2em rgb(255, 132, 0);
+    }
+    .border__two {
+        margin-bottom: 0px;
+        border: solid 10px rgb(255, 132, 0);
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header__style">
+        <img class="header__logo" src="https://i.pinimg.com/originals/b7/fd/d2/b7fdd2fe4027657fb517f0710461b821.jpg" alt="Нужно потерпеть" class="logo">
+        <div class="header__button">
+            <button class="btn_add_cat"><a href="#form">Добавить котика</a></button>
+            <button class="btn" type="button"><a href="#container__cats">Котики</a></button>
+        </div>
+    </header>
+        <div class="container__cats" id="container__cats">
+        </div>
+            <div class="border__one"></div>
+            <div class="border__two"></div>
+    <section class="form" id="form">  
+        <div class="container__form">
+            <form>
+                <h1>Добавьте своего котика</h1>
+                <div class="form__group">
+                    <label for="id">Введите уникальный ID котика</label>
+                    <input type="text" placeholder="введите id" id="id">
+                </div>
+                <div class="form__group">
+                    <label for="name">Введите имя котика</label>
+                    <input type="name" placeholder="например: Барсик" id="name">
+                </div>
+                <div class="form__group">
+                    <label>Это любимый котик?</label>
+                    <label>
+                        <input type="radio" name="gender">
+                        Любимый ♥
+                    </label>
+                    <label>
+                        <input type="radio" name="gender">
+                        Нет :(
+                    </label>
+                </div>
+                <div class="form__group">
+                    <label for="budget">Выберите рейтинг от 0 до 10</label>
+                    <select id="budget_one">
+                        <!-- от 0 до 10 с помощью js -->
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="budget">Выберите возраст</label>
+                    <select id="budget_two">
+                        <!-- от 0 до 25 с помощью js -->
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="msg">Описание котика</label>
+                    <textarea id="msg" name="описание"></textarea>
+                </div>
+                <div class="form__group">
+                    <label for="name">Введите ссылку на изображение</label>
+                    <input type="name" placeholder="вставьте URL картинки" id="name">
+                </div>   
+                <button class="btn_add_form" type="submit">Создать</button>
+                <button class="btn_delete_form" type="reset">Очистить форму</button>
+            </form>
+        </div> 
+    </section>     
+    <script defer src="./indexJS.js"></script>
+    <script defer src="./dom.js"></script>
+</body>
+</html>
+
+
