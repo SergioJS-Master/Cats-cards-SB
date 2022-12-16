@@ -15,7 +15,8 @@
             <button class="btn" type="button"><a href="#container__cats">Котики</a></button>
         </div>
     </header>
-        <div class="container__cats" id="container__cats">
+        <div data-btnDel class="container__cats" id="container__cats">
+        
         </div>
             <div class="border__one"></div>
             <div class="border__two"></div>
@@ -43,7 +44,7 @@
                     </label>
                 </div>
                 <div class="form__group">
-                    <label for="budget">Выберите рейтинг от 0 до 10</label>
+                    <label for="budget_one">Выберите рейтинг от 0 до 10</label>
                     <select id="budget_one">
                         <!-- от 0 до 10 с помощью js -->
                     </select>
@@ -62,8 +63,8 @@
                     <label for="name">Введите ссылку на изображение</label>
                     <input type="name" placeholder="вставьте URL картинки" id="name">
                 </div>   
-                <button class="btn_add_form" type="submit">Создать</button>
                 <button class="btn_delete_form" type="reset">Очистить форму</button>
+                <button class="btn_add_form" type="submit">Создать</button>
             </form>
         </div> 
     </section>     

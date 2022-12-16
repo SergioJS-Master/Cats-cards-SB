@@ -31,20 +31,14 @@ html {
 .header__button {
     justify-content: flex-end;
 }
-/* .btn a {
-    text-decoration: none;
-    font-family: Comic Sans MS, Comic Sans, cursive;
-    font-size: 15px;
-    color: white;
-    text-align: center;
-} */
-
 .container__cats {
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 20px;
 }
+
 .card__cats {
     width: 300px;
     height: auto;
@@ -129,8 +123,7 @@ a {
     height: auto;
     border: none;
     padding: 15px;
-    margin: 35px;
-    margin-top: auto;
+    margin: 20px;
     transition: ease-in 0.2s;
 }
 .btn_delete_form {
@@ -144,8 +137,7 @@ a {
     height: auto;
     border: none;
     padding: 15px;
-    margin: 35px;
-    margin-top: auto;
+    margin: 20px;
     transition: ease-in 0.2s;
 }
 .btn_add_form:hover {
@@ -179,7 +171,7 @@ a {
     background-position: center;
     background-size: cover;
     width: auto;
-    height: 1000px; 
+    height: auto; 
     margin-top: 0px;
     font-family: Comic Sans MS, Comic Sans, cursive;
     font-size: 20px;
