@@ -22,52 +22,149 @@
             <div class="border__two"></div>
     <section class="form" id="form">  
         <div class="container__form">
-            <form>
+            <form name="createCatForm">
                 <h1>Добавьте своего котика</h1>
                 <div class="form__group">
-                    <label for="id">Введите уникальный ID котика</label>
-                    <input type="text" placeholder="введите id" id="id">
+                    <label for="id_cat">Введите уникальный ID котика:</label>
+                    <input 
+                        name="id" 
+                        required
+                        type="number" 
+                        placeholder="введите id" 
+                        id="id_cat">
                 </div>
                 <div class="form__group">
-                    <label for="name">Введите имя котика</label>
-                    <input type="name" placeholder="например: Барсик" id="name">
+                    <label for="name">Введите имя котика:</label>
+                    <input 
+                        name="name"
+                        required 
+                        type="text" 
+                        placeholder="например: Барсик" 
+                        id="name">
                 </div>
                 <div class="form__group">
                     <label>Это любимый котик?</label>
                     <label>
-                        <input type="radio" name="gender">
+                    <input 
+                        name="favorite"
+                        type="radio">
                         Любимый ♥
                     </label>
                     <label>
-                        <input type="radio" name="gender">
+                    <input 
+                        name="favorite"
+                        type="radio">
                         Нет :(
                     </label>
                 </div>
                 <div class="form__group">
-                    <label for="budget_one">Выберите рейтинг от 0 до 10</label>
-                    <select id="budget_one">
+                    <label for="rating">Выберите рейтинг от 0 до 10:</label>
+                    <select 
+                        name="rate"
+                        id="rating">
                         <!-- от 0 до 10 с помощью js -->
                     </select>
                 </div>
                 <div class="form__group">
-                    <label for="budget">Выберите возраст</label>
-                    <select id="budget_two">
+                    <label for="age_cat">Выберите возраст:</label>
+                    <select 
+                        name="age"
+                        id="age_cat"> 
                         <!-- от 0 до 25 с помощью js -->
                     </select>
                 </div>
                 <div class="form__group">
-                    <label for="msg">Описание котика</label>
-                    <textarea id="msg" name="описание"></textarea>
+                    <label for="name">Описание котика:</label>
+                    <input 
+                        name="description"
+                        type="text"
+                        placeholder="Описание" 
+                        class="form-control"
+                    /> 
                 </div>
                 <div class="form__group">
-                    <label for="name">Введите ссылку на изображение</label>
-                    <input type="name" placeholder="вставьте URL картинки" id="name">
+                    <label for="img">Введите ссылку на изображение:</label>
+                    <input 
+                        name="image"
+                        type="text" 
+                        placeholder="вставьте URL картинки" 
+                        id="img"
+                    />
                 </div>   
                 <button class="btn_delete_form" type="reset">Очистить форму</button>
                 <button class="btn_add_form" type="submit">Создать</button>
             </form>
         </div> 
-    </section>     
+    </section>
+<!-- 
+
+    <div class="modal hidden">
+        <div class="container_modal_style">
+        <form class="modal__form" name="createCatForm">
+            <h1>Редактировать котика</h1>
+            <div class="modal_form_group">
+                <label for="name">Введите имя котика:</label>
+                <input 
+                    name="name"
+                    required 
+                    type="text" 
+                    placeholder="например: Барсик" 
+                    id="name">
+            </div>
+            <div class="modal_form_group">
+                <label>Это любимый котик?</label>
+                <label>
+                <input 
+                    name="favorite"
+                    type="radio">
+                    Любимый ♥
+                </label>
+                <label>
+                <input 
+                    name="favorite"
+                    type="radio">
+                    Нет :(
+                </label>
+            </div>
+            <div class="modal_form_group">
+                <label for="rating">Выберите рейтинг от 0 до 10:</label>
+                <select 
+                    name="rate"
+                    id="modal_rating_cat"> -->
+                    <!-- от 0 до 10 с помощью js -->
+                <!-- </select>
+            </div>
+            <div class="modal_form_group">
+                <label for="age_cat">Выберите возраст:</label>
+                <select 
+                    name="age"
+                    id="modal_age_cat">  -->
+                    <!-- от 0 до 25 с помощью js -->
+                <!-- </select>
+            </div>
+            <div class="modal_form_group">
+                <label for="name">Описание котика:</label>
+                <input 
+                    name="description"
+                    type="text"
+                    placeholder="Описание" 
+                    class="form-control"
+                /> 
+            </div>
+            <div class="modal_form_group">
+                <label for="img">Введите ссылку на изображение:</label>
+                <input 
+                    name="image"
+                    type="text" 
+                    placeholder="вставьте URL картинки" 
+                    id="img"
+                />
+            </div>   
+            <button class="modal_btn_delete" type="reset">Очистить форму</button>
+            <button class="modal_btn_add" type="submit">Принять изменения</button>
+        </form>
+        </div> 
+    </div>     -->
     <script defer src="./indexJS.js"></script>
     <script defer src="./dom.js"></script>
 </body>
