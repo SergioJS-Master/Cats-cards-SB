@@ -15,7 +15,7 @@
             <button class="btn" type="button"><a href="#container__cats">Котики</a></button>
         </div>
     </header>
-        <div data-btnDel class="container__cats" id="container__cats">
+        <div data-btnDel data-btnInfo data-btnChange="ChangeCats" class="container__cats" id="container__cats">
         
         </div>
             <div class="border__one"></div>
@@ -96,17 +96,16 @@
             </form>
         </div> 
     </section>
-<!-- 
 
-    <div class="modal hidden">
-        <div class="container_modal_style">
-        <form class="modal__form" name="createCatForm">
+
+    <div data-modalWr class="modal hidden_edit">
+        <div data-modalContent class="container_modal_style">
+        <form class="modal__form" id="createCatForm">
             <h1>Редактировать котика</h1>
             <div class="modal_form_group">
                 <label for="name">Введите имя котика:</label>
                 <input 
                     name="name"
-                    required 
                     type="text" 
                     placeholder="например: Барсик" 
                     id="name">
@@ -130,17 +129,17 @@
                 <label for="rating">Выберите рейтинг от 0 до 10:</label>
                 <select 
                     name="rate"
-                    id="modal_rating_cat"> -->
+                    id="modal_rating_cat">
                     <!-- от 0 до 10 с помощью js -->
-                <!-- </select>
+                </select>
             </div>
             <div class="modal_form_group">
                 <label for="age_cat">Выберите возраст:</label>
                 <select 
                     name="age"
-                    id="modal_age_cat">  -->
+                    id="modal_age_cat"> 
                     <!-- от 0 до 25 с помощью js -->
-                <!-- </select>
+                </select>
             </div>
             <div class="modal_form_group">
                 <label for="name">Описание котика:</label>
@@ -159,12 +158,16 @@
                     placeholder="вставьте URL картинки" 
                     id="img"
                 />
-            </div>   
+            </div> 
+            
             <button class="modal_btn_delete" type="reset">Очистить форму</button>
             <button class="modal_btn_add" type="submit">Принять изменения</button>
         </form>
         </div> 
-    </div>     -->
+    </div> 
+    <div data-modalInfo class="modal__info hidden_info">
+        
+    </div>     
     <script defer src="./indexJS.js"></script>
     <script defer src="./dom.js"></script>
 </body>
