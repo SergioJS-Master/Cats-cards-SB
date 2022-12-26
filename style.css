@@ -401,8 +401,8 @@ form select {
         height: auto;
         border: none;
         padding: 15px;
-        margin: 35px;
-        margin-top: auto;
+        /* margin: 35px; */
+        /* margin-top: auto; */
         transition: ease-in 0.2s;
     }
     .form {
@@ -429,7 +429,7 @@ form select {
         height: auto;
         margin: 15px;
         display: grid;
-        padding: 25px;
+        /* padding: 25px; */
         border-radius: 25px;
         box-shadow: 0px 0px 12px #ffc37f;
     }
@@ -444,7 +444,7 @@ form select {
         box-shadow: 0px 0px 8px #ffc37f;
         border-radius: 15px;
         margin-top: 10px;
-        margin-left: 1px;
+        margin-left: 10px;
         margin-right: 1px;  
     }
     .form__group label {
@@ -570,6 +570,7 @@ form select {
     align-items: center;
     backdrop-filter: blur(3px);
     z-index: 1;
+    /* position: relative;  */
 }
 
 .hidden_info {
@@ -587,3 +588,4 @@ form select {
     box-shadow: 0px 0px 10px rgb(255, 132, 0);
     background-image: url(./img/ctPNJ.png);
 }
+

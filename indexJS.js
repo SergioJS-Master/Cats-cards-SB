@@ -1,3 +1,4 @@
+
 const $cardCats = document.querySelector('#container__catsAll');
 //const catsTest = document.querySelector('#container__catsAll')
 const $createCatForm = document.forms.createCatForm;
@@ -8,6 +9,7 @@ const $catCreateFormTemplate = document.getElementById('createCatForm');
 const $modalBtnInfoCard = document.querySelector('[data-btnInfo]')
 const $dataModalInfo = document.querySelector('[data-modalInfo]')
 const $containerCatsAll = document.querySelector('#container__cats')
+const $cataFormOne = document.querySelector('.catFormOne')
 
 //добавление карточек котов 
 const ACTION = {
@@ -78,17 +80,16 @@ $cardCats.addEventListener('click', (e) => {
 const addNewCardCat = $createCatForm.addEventListener('submit', (e) => {
     e.preventDefault() // preventDefault - отмена поведение формы по умолчанию
 
-    let formDataObject = Object.fromEntries(new FormData(e.target).entries())
-    formDataObject = {
+    const objCat = (formDataObject) => ({
         ...formDataObject,
         id: +formDataObject.id,
         rate: +formDataObject.rate,
         age: +formDataObject.age,
         favorite: !!formDataObject.favorite
-    }
-    if(formDataObject.id == '') {
-        alert('Введите обязательные данные')
-    }
+    })
+    let formDataObject = objCat(Object.fromEntries(new FormData($createCatForm).entries()))
+    //localStorage.setItem('catInfoLocalSt', JSON.stringify(formDataObject))
+
     
     fetch('https://cats.petiteweb.dev/api/single/SergioJS-ONE/add/', {
         method: 'POST',
@@ -98,14 +99,24 @@ const addNewCardCat = $createCatForm.addEventListener('submit', (e) => {
         body: JSON.stringify(formDataObject) //объект фн. и тд передать невозможно. По этому мы должны преобразовать в строку
     }).then((res) => {
         if (res.status === 200) {
-            return $cardCats.insertAdjacentHTML('afterbegin', showAllCats(formDataObject))
+            return $cardCats.insertAdjacentHTML('afterbegin', showAllCats(objCat))
         }
         throw Error('Ошибка, добавить картоку не получилось. Попробуйте другой номер ID')
     }).catch(alert)
 })
 
+let newObj = {};
+$cataFormOne.addEventListener('change', () => { 
+    newObj[event.target.name] = event.target.value;
+    localStorage.setItem('newObj', JSON.stringify(newObj))
+})
 
-
+if (localStorage.getItem('newObj')) {
+    newObj = JSON.parse(localStorage.getItem('newObj'))
+    for (let key in newObj) {
+        $cataFormOne.elements[key].value = newObj[key]
+    }
+}   
 
 '___________________________________________________________________________________________________________________________________________'
 //добавление функции коррекции карточки 
@@ -259,7 +270,7 @@ const openClickModalInfobBlock = ((e) => {
         const putModalCats = (cat) => {
             return `
                 <div class="modal_info_card">
-                    <div data-cat-id="${cat.id}" class="modal_info_cats">
+                <div data-cat-id="${cat.id}" class="modal_info_cats">
                         <img src="${cat.image}" alt="Нужно потерпеть">
                         <h1>Имя: "${cat.name}" </h1>
                         <p>Любимчик?: <span class = 'span'>${cat.favorite === true ? 'Д♥А' : ' нет :('}</span></p>
@@ -288,4 +299,3 @@ document.addEventListener('keydown', (e) => {
 
 
 
-         
